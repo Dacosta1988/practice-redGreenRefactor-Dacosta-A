@@ -1,14 +1,9 @@
 function countVowels(str) {
+  const vowels = new Set(["a", "e", "i", "o", "u"]);
   let count = 0;
 
-  for (const char of str) {
-    if (
-      char === "a" ||
-      char === "e" ||
-      char === "i" ||
-      char === "o" ||
-      char === "u"
-    ) {
+  for (const char of str.toLowerCase()) {
+    if (vowels.has(char)) {
       count++;
     }
   }
